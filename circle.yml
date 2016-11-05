@@ -1,0 +1,17 @@
+machine:
+  node:
+    version: 6.9.1
+
+dependencies:
+  override:
+    - echo dependencies
+
+test:
+  override:
+    - echo test
+
+deployment:
+  publish:
+    tag: /v\d+(?:\.\d+)*/
+    commands:
+      - echo publish
